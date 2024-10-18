@@ -25,11 +25,26 @@ def nerveOfSteelGame():
 
     start_time = time.time()
 
+    # Keep asking players to enter their names while the random timer runs, loop will stop once the random time is up
+    while time.time() - start_time < random_time:
+        # Ask the user to enter the name of a player who sits down
+        player_name = input("Enter the name of a player who sits down (or press Enter to skip): ") # this line is bugged as the timer can go on for long time and the last player to sit down will be the winner
+        
+        # If a player name is entered, add it to the list of players who sat down
+        if player_name:
+            players_sitting.append(player_name)
 
-# ask user to enter desired countdown time
-set_time = int(input("Please set your timer in seconds: "))
+    print("Time's Up!")
 
-time.sleep(set_time)
+    im.show()
 
-im.show()
+    # Print the list of players who sat down
+    print("The following players sat down:")
+    for player in players_sitting:
+        print(player)
+
+    print(f"The last player to sit down, and the winner is: {players_sitting[-1]}")
+
+# Call the nerveOfSteelGame function
+nerveOfSteelGame()
 
