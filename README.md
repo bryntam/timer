@@ -14,6 +14,12 @@
 
 ![times-up!](https://media.makeameme.org/created/times-up-5923e0.jpg)\
 
+**Pseudocode**:  
+1. Display "Players stand".  
+2. Start a random timer (10-25 seconds).  
+3. Collect player names as they sit down.  
+4. After the timer ends, announce the last player to sit as the winner.
+
 This is a timer program written in Python  
 
 
