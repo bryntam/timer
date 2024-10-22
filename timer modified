@@ -1,0 +1,36 @@
+# This program is a timer that counts down
+
+import random 
+import time 
+from PIL import Image 
+
+im = Image.open("times-up.jpeg")
+
+def nerve_of_steel_game():
+    print("Players stand")
+
+    # List of players sitting
+    players_sitting = []
+
+    # Generate random time between 10 to 25 seconds
+    random_time = random.randint(10, 25)
+
+    # Start timer countdown
+    start_time = time.time()
+    while time.time() - start_time < random_time:
+        name = input("Enter the name of the player who sits down (or press Enter if no one sits down): ")
+        if name:
+            players_sitting.append(name)
+
+    # Display "Time's Up" and show image
+    print("Time's Up!")
+    im.show()
+
+    if players_sitting:
+        winner = players_sitting[-1]
+        print(f"The last person to sit down is {winner}. They win!")
+    else:
+        print("No one sat down. There is no winner.")
+
+# Run the game
+nerve_of_steel_game()
