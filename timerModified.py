@@ -24,7 +24,6 @@ def nerve_of_steel_game():
             players_sitting.append(name)
 
     # Display "Time's Up" and show image
-    print("Time's Up!")
     im.show()
 
     if players_sitting:
