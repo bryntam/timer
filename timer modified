@@ -1,8 +1,8 @@
-# This program is a timer that counts down
+# This program is a timer that counts down for the Nerve of Steel game
 
-import random 
-import time 
-from PIL import Image 
+import random # The random library will be used to generate random numbers
+import time # The time library has a sleep function that will pause the script for a specified amount of time
+from PIL import Image # the pillow library makes it easy to display images 
 
 im = Image.open("times-up.jpeg")
 
@@ -14,6 +14,7 @@ def nerve_of_steel_game():
 
     # Generate random time between 10 to 25 seconds
     random_time = random.randint(10, 25)
+    print(f"Sleeping for {random_time} seconds... Players can sit down during this time.")
 
     # Start timer countdown
     start_time = time.time()
